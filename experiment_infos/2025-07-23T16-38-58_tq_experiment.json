@@ -1,0 +1,26 @@
+{
+  "f00c33d0-752d-4fbe-b004-924bb9b9f914": {
+    "circuit": [],
+    "initState": "00",
+    "sweeps": 100000.0,
+    "single_shot": true
+  },
+  "4dad0e01-4645-4799-bbb5-2f78ecf69a5b": {
+    "circuit": [],
+    "initState": "01",
+    "sweeps": 100000.0,
+    "single_shot": true
+  },
+  "9c11144e-fc92-477f-8cd7-46f531c13f0d": {
+    "circuit": [],
+    "initState": "10",
+    "sweeps": 100000.0,
+    "single_shot": true
+  },
+  "d7e649d6-27fe-476f-a2f8-a4d9b7e3fe80": {
+    "circuit": [],
+    "initState": "11",
+    "sweeps": 100000.0,
+    "single_shot": true
+  }
+}

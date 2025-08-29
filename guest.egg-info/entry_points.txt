@@ -1,0 +1,2 @@
+[console_scripts]
+guest = cli:cli

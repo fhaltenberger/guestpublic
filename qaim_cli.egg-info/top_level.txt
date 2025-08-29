@@ -1,0 +1,4 @@
+cli
+send_qasm_file
+try_device_flow
+userinfo

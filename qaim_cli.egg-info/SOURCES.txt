@@ -1,0 +1,12 @@
+README.md
+cli.py
+send_qasm_file.py
+setup.py
+try_device_flow.py
+userinfo.py
+qaim_cli.egg-info/PKG-INFO
+qaim_cli.egg-info/SOURCES.txt
+qaim_cli.egg-info/dependency_links.txt
+qaim_cli.egg-info/entry_points.txt
+qaim_cli.egg-info/requires.txt
+qaim_cli.egg-info/top_level.txt

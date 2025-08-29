@@ -1,0 +1,18 @@
+{
+    "server": {
+      "url": "https://guest",
+      "port": 443
+    },
+    "keycloak": {
+      "client_id": "guest-client",
+      "realm": "guest-realm",
+      "client_secret": "sBTaTsAvzkHEIcNpvLjj10pfXybO4ayG"
+    },
+    "security": {
+      "token_lifetime": 3600,
+      "refresh_token_lifetime": 86400
+    },
+    "paths": {
+      "token_file_path": "keycloak_token/token.json"
+    }
+}

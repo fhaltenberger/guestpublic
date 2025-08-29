@@ -1,0 +1,6 @@
+cli
+cli_authenticate
+cli_qudi_commands
+cli_scheduling
+cli_send_qasm_file
+cli_userinfo

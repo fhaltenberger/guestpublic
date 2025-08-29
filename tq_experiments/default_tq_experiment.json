@@ -1,0 +1,10 @@
+{
+  "experiments": [
+    {"initState": "00", "circuit": ""},
+    {"initState": "01", "circuit": ""},
+    {"initState": "10", "circuit": ""},
+    {"initState": "11", "circuit": ""}
+  ],
+  "sweeps": 1000000,
+  "single_shot": true
+}

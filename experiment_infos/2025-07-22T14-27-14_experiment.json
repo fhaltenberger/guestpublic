@@ -1,0 +1,22 @@
+{
+  "2fc358c0-2da8-41ff-8cc0-bf6a0b65505b": {
+    "circuit": [],
+    "initState": "00",
+    "sweeps": 100000.0
+  },
+  "47fc4e83-eb77-4bf1-81c7-e484cf319e62": {
+    "circuit": [],
+    "initState": "01",
+    "sweeps": 100000.0
+  },
+  "23eb7960-00d0-4935-810d-508be6fae787": {
+    "circuit": [],
+    "initState": "10",
+    "sweeps": 100000.0
+  },
+  "97255d00-aaea-49e0-93fc-83764dcd177f": {
+    "circuit": [],
+    "initState": "11",
+    "sweeps": 100000.0
+  }
+}
