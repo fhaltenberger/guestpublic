@@ -1,0 +1,98 @@
+{
+  "onyx-eagle": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "00",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "manipulative-hoatzin": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "01",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "discerning-harrier": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "10",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "daft-stork": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "11",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "mindful-deer": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "00",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "mysterious-prawn": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "01",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "eggplant-chachalaca": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "10",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "qualified-hornet": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "11",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "illegal-newt": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "00",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "arrogant-pegasus": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "01",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "dark-antelope": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "10",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "jasper-dugong": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "11",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "brilliant-salmon": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "00",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "vehement-boa": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "01",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "quiet-mackerel": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "10",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "groovy-dugong": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "11",
+    "sweeps": 100000,
+    "single_shot": false
+  }
+}

@@ -9,7 +9,7 @@ from cli_authenticate import authenticate_device_flow, check_token, load_token_j
 from cli_send_qasm_file import send_qasm_file
 from cli_qudi_commands import run_rabi, run_calibration, run_two_qubit_circuit, submit_two_qubit_batch
 from cli_userinfo import get_user_info
-from cli_scheduling import get_job_status, list_jobs, download_job_result, batch_download_results
+from cli_scheduling import get_job_status, list_jobs, download_job_result, batch_download_results, resubmit_job, job_details, check_availability
 
 def load_config():
     with open("config.json", "r") as config_file:
@@ -95,7 +95,7 @@ def job_status(job_id):
     get_job_status(token, job_id)
 
 @cli.command('list-jobs')
-@click.option('--limit', type=int, default=10, help='Maximum number of jobs to list')
+@click.option('--limit', type=int, default=30, help='Maximum number of jobs to list')
 def jobs_list(limit):
     """List your recent jobs"""
     token = load_token_json()["access_token"]
@@ -104,6 +104,28 @@ def jobs_list(limit):
         return
     
     list_jobs(token, limit)
+
+@cli.command('job-details')
+@click.option('--limit', type=int, default=30, help='Maximum number of jobs to list')
+def jobs_details(limit):
+    """List your recent jobs with detailed information"""
+    token = load_token_json()["access_token"]
+    if not token:
+        click.echo("You are not authenticated. Please authenticate using the 'auth' command.")
+        return
+    
+    job_details(token, limit)
+
+@cli.command('resubmit')
+@click.argument('job_id')
+def resubmit(job_id):
+    """Resubmit a failed job with the same parameters"""
+    token = load_token_json()["access_token"]
+    if not token:
+        click.echo("You are not authenticated. Please authenticate using the 'auth' command.")
+        return
+    
+    resubmit_job(token, job_id)
 
 @cli.command('download-result')
 @click.argument('job_id')
@@ -128,6 +150,16 @@ def batch_download(experiment_info_json, output_dir):
         return
     
     batch_download_results(token, experiment_info_json, output_dir)
+
+@cli.command('check-availability')
+def check_availability_cmd():
+    """Check if the server is reachable and get quantum computer module states"""
+    token = load_token_json()["access_token"]
+    if not token:
+        click.echo("You are not authenticated. Please authenticate using the 'auth' command.")
+        return
+    
+    check_availability(token)
     
 if __name__ == '__main__':
     # Ensure we're in the correct directory

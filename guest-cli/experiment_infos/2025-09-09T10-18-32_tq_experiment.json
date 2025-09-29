@@ -1,0 +1,98 @@
+{
+  "880bcc03-7bc0-4fa3-a5a0-22e4777952aa": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 100,
+    "single_shot": false
+  },
+  "edb511e0-e365-4148-baae-a06dc98ad3ac": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 100,
+    "single_shot": false
+  },
+  "ed9d796b-45b2-4af8-810e-c0dcfd434d6a": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 100,
+    "single_shot": false
+  },
+  "5812781b-e1f8-446c-b126-c72725ad4443": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 100,
+    "single_shot": false
+  },
+  "5e7559e6-e665-43c7-98e9-7dbcd48ed54b": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 100,
+    "single_shot": false
+  },
+  "ae5c234c-c087-4016-b58b-69dc7ce92071": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 100,
+    "single_shot": false
+  },
+  "893f75e5-6741-48e9-a2df-3a906af0bcae": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 100,
+    "single_shot": false
+  },
+  "a1efb83d-e2c1-4387-8f32-a3f4f257bc28": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 100,
+    "single_shot": false
+  },
+  "8d76cd51-92b3-43ad-933b-be59da4c9eea": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 100,
+    "single_shot": false
+  },
+  "4bd62fa2-3f19-4204-aab4-dbae26d7618f": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 100,
+    "single_shot": false
+  },
+  "d0d7d1de-10e8-44d2-ad01-02f512142ea4": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 100,
+    "single_shot": false
+  },
+  "9ffa54bc-b7d6-411b-b81c-b0f00a586acd": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 100,
+    "single_shot": false
+  },
+  "bcd409e6-9db2-4ea2-a7a6-8db3b703a8ff": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 100,
+    "single_shot": false
+  },
+  "3a7ef621-e200-489b-903f-4eebf2ccd452": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 100,
+    "single_shot": false
+  },
+  "96965523-0738-4360-bd93-70c2e3a87375": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 100,
+    "single_shot": false
+  },
+  "f629df6e-f915-4e3a-ace8-b6abed2d31af": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 100,
+    "single_shot": false
+  }
+}

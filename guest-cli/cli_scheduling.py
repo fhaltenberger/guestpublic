@@ -32,17 +32,24 @@ def get_job_status(token, job_id):
         if result['status'] == 'SUCCESS':
             duration = result.get('duration')
             if duration:
-                if duration < 60:
-                    execution_time = f"{duration:.1f} seconds"
-                elif duration < 3600:
-                    minutes = int(duration // 60)
-                    seconds = duration % 60
-                    execution_time = f"{minutes} minutes {seconds:.1f} seconds"
-                else:
-                    hours = int(duration // 3600)
-                    minutes = int((duration % 3600) // 60)
-                    execution_time = f"{hours} hours {minutes} minutes"
-                click.echo(f"Execution Time: {execution_time}")
+                try:
+                    # Convert duration to float first, then to int for calculations
+                    duration_float = float(duration)
+                    duration_int = int(duration_float)
+                    
+                    if duration_int < 60:
+                        execution_time = f"{duration_float:.1f} seconds"
+                    elif duration_int < 3600:
+                        minutes = int(duration_int // 60)
+                        seconds = duration_int % 60
+                        execution_time = f"{minutes} minutes {seconds:.1f} seconds"
+                    else:
+                        hours = int(duration_int // 3600)
+                        minutes = int((duration_int % 3600) // 60)
+                        execution_time = f"{hours} hours {minutes} minutes"
+                    click.echo(f"Execution Time: {execution_time}")
+                except (ValueError, TypeError):
+                    click.echo(f"Execution Time: {duration} (could not parse)")
             
             click.echo("\nResults:")
             if 'result' in result:
@@ -85,7 +92,7 @@ def get_job_status(token, job_id):
             except ValueError:
                 click.echo(f"Server response: {e.response.text}")
 
-def list_jobs(token, limit=10):
+def list_jobs(token, limit=30):
     """List all jobs with their submission times and execution duration for successful jobs"""
     headers = {"Authorization": f"Bearer {token}"}
     
@@ -298,3 +305,209 @@ def batch_download_results(token, experiment_info_json, output_dir=None):
     except Exception as e:
         click.echo(f"Unexpected error: {str(e)}")
         return 0, 0
+
+def job_details(token, limit=30):
+    """List all jobs with detailed information in a tabular format"""
+    headers = {"Authorization": f"Bearer {token}"}
+    
+    try:
+        response = requests.get(
+            f"{config['server']['url']}/api/tasks?limit={limit}", 
+            headers=headers,
+            verify="./guest.crt"
+        )
+        response.raise_for_status()
+        
+        result = response.json()
+        
+        if not result.get('tasks'):
+            click.echo("No jobs found.")
+            return
+            
+        click.echo("\nJob Details:")
+        click.echo("-" * 140)
+        click.echo(f"{'ID':<36} {'Type':<20} {'Status':<10} {'Submitted At':<25} {'Execution Time':<15} {'Parameters'}")
+        click.echo("-" * 140)
+        
+        for task in result.get('tasks', []):
+            task_id = task.get('task_id', 'Unknown')
+            task_type = task.get('task_type', 'Unknown')
+            status = task.get('status', 'Unknown')
+            submitted_at = task.get('submitted_at', 'Unknown')
+            
+            # Get task parameters
+            task_kwargs_str = task.get('task_kwargs', '{}')
+            try:
+                task_kwargs = json.loads(task_kwargs_str)
+            except json.JSONDecodeError:
+                task_kwargs = {}
+            
+            # Format parameters as a compact dict-like string
+            if task_kwargs:
+                # Filter out None/empty values and format nicely
+                filtered_params = {k: v for k, v in task_kwargs.items() if v is not None and v != ''}
+                if filtered_params:
+                    params_str = str(filtered_params)
+                else:
+                    params_str = "{}"
+            else:
+                params_str = "{}"
+            
+            # Calculate execution time for successful jobs
+            execution_time = ""
+            if status == 'SUCCESS':
+                duration = task.get('duration')
+                if duration:
+                    try:
+                        duration = int(float(duration))
+                        if duration < 60:
+                            execution_time = f"{duration:.1f}s"
+                        elif duration < 3600:
+                            minutes = int(duration // 60)
+                            seconds = duration % 60
+                            execution_time = f"{minutes}m {seconds:.1f}s"
+                        else:
+                            hours = int(duration // 3600)
+                            minutes = int((duration % 3600) // 60)
+                            execution_time = f"{hours}h {minutes}m"
+                    except (ValueError, TypeError):
+                        execution_time = "N/A"
+                else:
+                    execution_time = "N/A"
+            
+            click.echo(f"{task_id:<36} {task_type:<20} {status:<10} {submitted_at:<25} {execution_time:<15} {params_str}")
+        
+    except requests.exceptions.RequestException as e:
+        click.echo(f"Error: {str(e)}")
+        if hasattr(e, 'response') and e.response:
+            try:
+                error_detail = e.response.json()
+                click.echo(f"Server response: {json.dumps(error_detail, indent=2)}")
+            except ValueError:
+                click.echo(f"Server response: {e.response.text}")
+
+def resubmit_job(token, job_id):
+    """Resubmit a failed job with the same parameters"""
+    headers = {"Authorization": f"Bearer {token}"}
+    
+    try:
+        response = requests.post(
+            f"{config['server']['url']}/api/resubmit_job/{job_id}",
+            headers=headers,
+            verify="./guest.crt"
+        )
+        response.raise_for_status()
+        
+        result = response.json()
+        
+        click.echo(f"Job resubmitted successfully!")
+        click.echo(f"New Job ID: {result['task_id']}")
+        click.echo(f"Status: {result.get('status', 'unknown')}")
+        click.echo(f"Resubmitted from: {result.get('resubmitted_from', 'unknown')}")
+        click.echo(f"Use 'guest job-status {result['task_id']}' to check the status")
+        
+        return result['task_id']
+        
+    except requests.exceptions.RequestException as e:
+        click.echo(f"Error: {str(e)}")
+        if hasattr(e, 'response') and e.response:
+            try:
+                error_detail = e.response.json()
+                click.echo(f"Server response: {json.dumps(error_detail, indent=2)}")
+            except ValueError:
+                click.echo(f"Server response: {e.response.text}")
+        return None
+
+def check_availability(token):
+    """Check if the server is reachable and get module states"""
+    headers = {"Authorization": f"Bearer {token}"}
+    
+    try:
+        # First check if the main server is reachable
+        click.echo("🔍 Checking server availability...")
+        
+        # Try to reach the main API endpoint
+        response = requests.get(
+            f"{config['server']['url']}/api/tasks?limit=1",
+            headers=headers,
+            verify="./guest.crt",
+            timeout=10
+        )
+        response.raise_for_status()
+        
+        click.echo("✅ Server is reachable")
+        
+        # Now try to get module states from the quantum computer
+        click.echo("\n🔍 Checking quantum computer module states...")
+        
+        try:
+            # Try to reach the quantum computer's module states endpoint
+            module_response = requests.get(
+                f"{config['server']['url']}/api/get_module_states",
+                headers=headers,
+                verify="./guest.crt",
+                timeout=10
+            )
+            module_response.raise_for_status()
+            
+            module_states = module_response.json()
+            
+            click.echo("✅ Quantum computer is reachable")
+            click.echo("\n📊 Module States:")
+            click.echo("-" * 50)
+            
+            if isinstance(module_states, dict):
+                for module_name, state in module_states.items():
+                    # Color code the states
+                    if state == "idle":
+                        state_display = f"🟢 {state}"
+                    elif state == "locked":
+                        state_display = f"🔴 {state}"
+                    elif state == "inactive":
+                        state_display = f"⚪ {state}"
+                    else:
+                        state_display = f"❓ {state}"
+                    
+                    click.echo(f"{module_name:<20} {state_display}")
+            else:
+                click.echo(f"Module states: {module_states}")
+            
+            # Summary
+            if isinstance(module_states, dict):
+                idle_count = sum(1 for state in module_states.values() if state == "idle")
+                locked_count = sum(1 for state in module_states.values() if state == "locked")
+                inactive_count = sum(1 for state in module_states.values() if state == "inactive")
+                
+                click.echo("-" * 50)
+                click.echo(f"Summary: {idle_count} idle, {locked_count} locked, {inactive_count} inactive")
+                
+                if locked_count > 0:
+                    click.echo("⚠️  Some modules are locked (busy)")
+                elif idle_count > 0:
+                    click.echo("✅ Modules are available for new jobs")
+                else:
+                    click.echo("ℹ️  No active modules found")
+            
+        except requests.exceptions.RequestException as e:
+            click.echo("❌ Quantum computer is not reachable")
+            click.echo(f"   Error: {str(e)}")
+            if hasattr(e, 'response') and e.response:
+                try:
+                    error_detail = e.response.json()
+                    click.echo(f"   Server response: {json.dumps(error_detail, indent=2)}")
+                except ValueError:
+                    click.echo(f"   Server response: {e.response.text}")
+        
+    except requests.exceptions.RequestException as e:
+        click.echo("❌ Server is not reachable")
+        click.echo(f"   Error: {str(e)}")
+        if hasattr(e, 'response') and e.response:
+            try:
+                error_detail = e.response.json()
+                click.echo(f"   Server response: {json.dumps(error_detail, indent=2)}")
+            except ValueError:
+                click.echo(f"   Server response: {e.response.text}")
+    except requests.exceptions.Timeout:
+        click.echo("❌ Server request timed out")
+    except Exception as e:
+        click.echo(f"❌ Unexpected error: {str(e)}")

@@ -1,0 +1,98 @@
+{
+  "ec0b3c7d-8b20-4f38-9386-cc56fc7390cc": {
+    "circuit": "sxQB1",
+    "initState": "00",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "33ee55bd-ddc1-4058-8aaf-7083dfe10887": {
+    "circuit": "sxQB1",
+    "initState": "01",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "422c9044-1c13-419a-a664-86cf0dd9619a": {
+    "circuit": "sxQB1",
+    "initState": "10",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "39e0a4d5-ac6f-4e34-bcc4-e1403c93c04f": {
+    "circuit": "sxQB1",
+    "initState": "11",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "0f3223e7-f7b9-43e2-bb14-dcdc0fc40016": {
+    "circuit": "sxQB1",
+    "initState": "00",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "30f4dbb5-0af7-4e01-bf39-f57825dfc85a": {
+    "circuit": "sxQB1",
+    "initState": "01",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "b55a86e0-97a0-4a9b-82a2-f132d4961393": {
+    "circuit": "sxQB1",
+    "initState": "10",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "abcf4288-3aca-4508-b6cc-da30182cb0c1": {
+    "circuit": "sxQB1",
+    "initState": "11",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "9a065c3c-274a-4aa3-9e7a-9047b72e5575": {
+    "circuit": "sxQB1",
+    "initState": "00",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "00b2eba7-7940-44a1-b389-3647ede3a74b": {
+    "circuit": "sxQB1",
+    "initState": "01",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "230c94e8-d8e4-4227-a85b-252faab16fd9": {
+    "circuit": "sxQB1",
+    "initState": "10",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "ace9f88e-d177-440a-808d-e8d3af3ebec2": {
+    "circuit": "sxQB1",
+    "initState": "11",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "18273288-1124-4483-8de0-2596a7063640": {
+    "circuit": "sxQB1",
+    "initState": "00",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "f9abb667-f1ee-42be-a84a-4b6771f08094": {
+    "circuit": "sxQB1",
+    "initState": "01",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "a75714ef-89ee-43e0-bdcd-7df0bbc68857": {
+    "circuit": "sxQB1",
+    "initState": "10",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "dd3235fa-05cc-4f21-a78d-1dacdb7e29ec": {
+    "circuit": "sxQB1",
+    "initState": "11",
+    "sweeps": 100000,
+    "single_shot": false
+  }
+}

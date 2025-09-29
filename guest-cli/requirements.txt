@@ -11,6 +11,7 @@ cycler==0.12.1
 fastapi==0.115.13
 fonttools==4.58.5
 ghp-import==2.1.0
+# -e git+ssh://git@github.com/fhaltenberger/guest.git@ee2ada1e2053b250f40051828ad453e36a65a4db#egg=guest&subdirectory=guest-cli
 h11==0.16.0
 idna==3.10
 Jinja2==3.1.6

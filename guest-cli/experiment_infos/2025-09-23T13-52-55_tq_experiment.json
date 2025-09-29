@@ -1,0 +1,98 @@
+{
+  "412a869c-8c29-4499-a501-9416e45570c7": {
+    "circuit": "sxQB1_sxQB2",
+    "initState": "00",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "20c2d89b-c7b6-4de2-a514-2b343b312952": {
+    "circuit": "sxQB1_sxQB2",
+    "initState": "01",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "f136ed5c-8ea8-4ee6-84d4-4d9628ade5c4": {
+    "circuit": "sxQB1_sxQB2",
+    "initState": "10",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "114cda1a-7472-4548-90fa-7bd722023a57": {
+    "circuit": "sxQB1_sxQB2",
+    "initState": "11",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "027041cc-3aee-4217-b2eb-79c6139f89f2": {
+    "circuit": "sxQB1_sxQB2",
+    "initState": "00",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "a3ce0587-6ce7-4fea-aef0-1cde05ea9bd0": {
+    "circuit": "sxQB1_sxQB2",
+    "initState": "01",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "aa1b1b1c-d827-4c51-a467-0a51f5f19708": {
+    "circuit": "sxQB1_sxQB2",
+    "initState": "10",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "ceddc186-46f6-48b4-a418-e34f125f289a": {
+    "circuit": "sxQB1_sxQB2",
+    "initState": "11",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "d62a6040-a895-4235-8090-555cf5b15267": {
+    "circuit": "sxQB1_sxQB2",
+    "initState": "00",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "47d750e1-a750-4b1f-b172-8c9f06b70ba7": {
+    "circuit": "sxQB1_sxQB2",
+    "initState": "01",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "942a6b28-e255-4b12-a2af-906c1e448dbd": {
+    "circuit": "sxQB1_sxQB2",
+    "initState": "10",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "32d714a3-a561-440c-9450-5205793e8ade": {
+    "circuit": "sxQB1_sxQB2",
+    "initState": "11",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "995ec9b2-b85e-459a-8931-8df68bd23c9b": {
+    "circuit": "sxQB1_sxQB2",
+    "initState": "00",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "1a3c52c4-b2f8-4b43-a8e5-31bb289c15ad": {
+    "circuit": "sxQB1_sxQB2",
+    "initState": "01",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "180201c2-40f1-47c0-af3c-19e8a1e036d1": {
+    "circuit": "sxQB1_sxQB2",
+    "initState": "10",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "e5dc1903-1beb-439f-9544-c6f54493a258": {
+    "circuit": "sxQB1_sxQB2",
+    "initState": "11",
+    "sweeps": 100000,
+    "single_shot": false
+  }
+}
