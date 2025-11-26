@@ -1,1 +1,4 @@
 guest.key
+old-guest.key
+guest.crt
+keycloak_token/token.json

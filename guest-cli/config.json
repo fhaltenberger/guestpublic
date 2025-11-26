@@ -1,6 +1,6 @@
 {
     "server": {
-      "url": "https://guest",
+      "url": "https://141.2.38.44",
       "port": 443
     },
     "keycloak": {
