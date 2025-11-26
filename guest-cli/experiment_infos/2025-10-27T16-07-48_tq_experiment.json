@@ -1,0 +1,14 @@
+{
+  "tiny-tench": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "00",
+    "sweeps": 1000,
+    "single_shot": false
+  },
+  "proud-bird": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "01",
+    "sweeps": 1000,
+    "single_shot": false
+  }
+}

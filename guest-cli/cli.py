@@ -9,7 +9,7 @@ from cli_authenticate import authenticate_device_flow, check_token, load_token_j
 from cli_send_qasm_file import send_qasm_file
 from cli_qudi_commands import run_rabi, run_calibration, run_two_qubit_circuit, submit_two_qubit_batch
 from cli_userinfo import get_user_info
-from cli_scheduling import get_job_status, list_jobs, download_job_result, batch_download_results, resubmit_job, job_details, check_availability
+from cli_scheduling import get_job_status, list_jobs, download_job_result, batch_download_results, resubmit_job, job_details, check_availability, cancel_job, cancel_pending_jobs
 
 def load_config():
     with open("config.json", "r") as config_file:
@@ -76,12 +76,18 @@ def two_qubit_circuit():
     run_two_qubit_circuit(token)
 
 @cli.command('submit-tq-batch')
-def submit_tq_batch():
+@click.option(
+    '--experiment-path',
+    '-e',
+    type=click.Path(exists=True),
+    help='Path to a custom two-qubit experiment definition JSON file'
+)
+def submit_tq_batch(experiment_path):
     """Submit a batch of experiments to be run as two qubit circuits"""
     token = load_token_json()["access_token"]
     if not token:
         click.echo("You are not authenticated. Please authenticate using the 'auth' command.")
-    submit_two_qubit_batch(token)
+    submit_two_qubit_batch(token, experiment_path)
 
 # ------------ QUEUE MANAGEMENT STUFF ---------------------
 
@@ -126,6 +132,26 @@ def resubmit(job_id):
         return
     
     resubmit_job(token, job_id)
+
+@cli.command('cancel')
+@click.argument('job_id')
+@click.option('--terminate/--no-terminate', default=False, help='Terminate the task if it is already running')
+def cancel(job_id, terminate):
+    """Cancel a job by ID (does not terminate running tasks by default)"""
+    token = load_token_json()["access_token"]
+    if not token:
+        click.echo("You are not authenticated. Please authenticate using the 'auth' command.")
+        return
+    cancel_job(token, job_id, terminate)
+
+@cli.command('cancel-pending')
+def cancel_pending_cmd():
+    """Cancel all pending/retrying jobs for the current user"""
+    token = load_token_json()["access_token"]
+    if not token:
+        click.echo("You are not authenticated. Please authenticate using the 'auth' command.")
+        return
+    cancel_pending_jobs(token)
 
 @cli.command('download-result')
 @click.argument('job_id')

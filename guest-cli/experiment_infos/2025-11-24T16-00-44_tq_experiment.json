@@ -1,0 +1,98 @@
+{
+  "umber-quail": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "00",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "raspberry-hoatzin": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "01",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "economic-oxpecker": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "10",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "tungsten-coyote": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "11",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "radical-gibbon": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "00",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "private-gopher": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "01",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "lemon-shrew": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "10",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "pistachio-toad": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "11",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "gregarious-hummingbird": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "00",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "diamond-mandrill": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "01",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "little-inchworm": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "10",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "ochre-tuna": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "11",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "adept-eel": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "00",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "wine-mackerel": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "01",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "voracious-tamarin": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "10",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "gabby-rattlesnake": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "11",
+    "sweeps": 100000,
+    "single_shot": false
+  }
+}

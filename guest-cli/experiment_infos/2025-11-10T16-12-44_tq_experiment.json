@@ -1,0 +1,50 @@
+{
+  "misty-hoatzin": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "adaptable-pheasant": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "wooden-pelican": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "mahogany-oyster": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "perfect-dalmatian": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "rustling-urchin": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "unselfish-python": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "ninja-marmoset": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 100000,
+    "single_shot": false
+  }
+}

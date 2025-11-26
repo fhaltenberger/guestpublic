@@ -1,3 +1,5 @@
+import base64
+import binascii
 import requests
 import json
 import click
@@ -11,6 +13,17 @@ def load_config():
     return config
 
 config = load_config()
+
+def _extract_user_id_from_token(token: str):
+    """Decode the JWT access token locally to obtain the submitting user's id."""
+    try:
+        payload_segment = token.split(".")[1]
+        padding = '=' * (-len(payload_segment) % 4)
+        decoded_bytes = base64.urlsafe_b64decode(payload_segment + padding)
+        payload = json.loads(decoded_bytes.decode("utf-8"))
+        return payload.get("sub")
+    except (IndexError, ValueError, json.JSONDecodeError, binascii.Error):
+        return None
 
 def get_job_status(token, job_id):
     headers = {"Authorization": f"Bearer {token}"}
@@ -95,6 +108,15 @@ def get_job_status(token, job_id):
 def list_jobs(token, limit=30):
     """List all jobs with their submission times and execution duration for successful jobs"""
     headers = {"Authorization": f"Bearer {token}"}
+    user_id = _extract_user_id_from_token(token)
+    
+    # Job type abbreviations dictionary
+    job_type_abbreviations = {
+        'run_two_qubit_circuit': 'TQ',
+        'run_rabi_oscillation': 'RB',
+        'run_calibration': 'CAL',
+        # Add more abbreviations as needed
+    }
     
     try:
         response = requests.get(
@@ -104,22 +126,41 @@ def list_jobs(token, limit=30):
         )
         response.raise_for_status()
         
-        result = response.json()
-        
-        if not result.get('tasks'):
-            click.echo("No jobs found.")
+        result = response.json()        
+        tasks = result.get('tasks', [])
+
+        if user_id:
+            tasks = [task for task in tasks if task.get('user_id') == user_id]
+
+        if not tasks:
+            click.echo("No jobs found for the authenticated user.")
             return
             
         click.echo("\nYour Jobs:")
-        click.echo("-" * 140)
-        click.echo(f"{'ID':<36} {'Type':<20} {'Status':<10} {'Submitted At':<25} {'Execution Time':<15} {'Failure Info'}")
-        click.echo("-" * 140)
+        click.echo("-" * 100)
+        click.echo(f"{'ID':<26} {'Type':<4} {'Status':<10} {'Submitted At':<12} {'Execution Time':<15} {'Failure Info'}")
+        click.echo("-" * 100)
         
-        for task in result.get('tasks', []):
+        for task in tasks:
             task_id = task.get('task_id', 'Unknown')
             task_type = task.get('task_type', 'Unknown')
             status = task.get('status', 'Unknown')
             submitted_at = task.get('submitted_at', 'Unknown')
+            
+            # Format timestamp to show only MM-DDTHH:MM
+            if submitted_at != 'Unknown':
+                try:
+                    # Parse the timestamp and format it
+                    from datetime import datetime
+                    dt = datetime.fromisoformat(submitted_at.replace('Z', '+00:00'))
+                    formatted_time = dt.strftime('%m-%dT%H:%M')
+                except (ValueError, AttributeError):
+                    formatted_time = submitted_at[:12]  # Fallback to first 12 chars
+            else:
+                formatted_time = 'Unknown'
+            
+            # Get job type abbreviation
+            job_type_abbrev = job_type_abbreviations.get(task_type, '--')
             
             # Calculate execution time for successful jobs
             execution_time = ""
@@ -156,7 +197,7 @@ def list_jobs(token, limit=30):
                 else:
                     failure_info = f"Error (retries: {retries})"
             
-            click.echo(f"{task_id:<36} {task_type:<20} {status:<10} {submitted_at:<25} {execution_time:<15} {failure_info}")
+            click.echo(f"{task_id:<26} {job_type_abbrev:<4} {status:<10} {formatted_time:<12} {execution_time:<15} {failure_info}")
         
     except requests.exceptions.RequestException as e:
         click.echo(f"Error: {str(e)}")
@@ -417,6 +458,62 @@ def resubmit_job(token, job_id):
             except ValueError:
                 click.echo(f"Server response: {e.response.text}")
         return None
+
+def cancel_job(token, job_id, terminate=False):
+    """Cancel a single job by ID"""
+    headers = {"Authorization": f"Bearer {token}"}
+    try:
+        response = requests.post(
+            f"{config['server']['url']}/api/cancel_task/{job_id}",
+            headers=headers,
+            params={"terminate": "true" if terminate else "false"},
+            verify="./guest.crt"
+        )
+        response.raise_for_status()
+        result = response.json()
+        click.echo(f"Canceled: {result.get('task_id', job_id)} (status: {result.get('status')})")
+        click.echo(result.get('message', ''))
+        return True
+    except requests.exceptions.RequestException as e:
+        click.echo(f"Error: {str(e)}")
+        if hasattr(e, 'response') and e.response:
+            try:
+                error_detail = e.response.json()
+                click.echo(f"Server response: {json.dumps(error_detail, indent=2)}")
+            except ValueError:
+                click.echo(f"Server response: {e.response.text}")
+        return False
+
+def cancel_pending_jobs(token):
+    """Cancel all pending/retrying jobs for the current user"""
+    headers = {"Authorization": f"Bearer {token}"}
+    try:
+        response = requests.post(
+            f"{config['server']['url']}/api/cancel_pending",
+            headers=headers,
+            verify="./guest.crt"
+        )
+        response.raise_for_status()
+        result = response.json()
+        canceled = result.get('canceled', [])
+        skipped = result.get('skipped', [])
+        click.echo(f"Canceled {len(canceled)} job(s).")
+        if skipped:
+            click.echo(f"Skipped {len(skipped)} job(s):")
+            for entry in skipped[:10]:
+                click.echo(f"  {entry.get('task_id')} (status: {entry.get('status')})")
+            if len(skipped) > 10:
+                click.echo(f"  ... and {len(skipped) - 10} more")
+        return True
+    except requests.exceptions.RequestException as e:
+        click.echo(f"Error: {str(e)}")
+        if hasattr(e, 'response') and e.response:
+            try:
+                error_detail = e.response.json()
+                click.echo(f"Server response: {json.dumps(error_detail, indent=2)}")
+            except ValueError:
+                click.echo(f"Server response: {e.response.text}")
+        return False
 
 def check_availability(token):
     """Check if the server is reachable and get module states"""

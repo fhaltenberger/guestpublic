@@ -44,4 +44,22 @@ You can send a "test" circuit to the Q-AIM server, which it then sets up and exe
 You can write your own OpenQASM files and send them instead, by specifying the `--qasm_file` argument of `send_qasm_file.py` accordingly. 
 For now, if everything works, this script returns a string containing the result of the simulation in the form of the counts of each measured state, and 64-bit encoded version of an image depicting the circuit visually.
 
+## Submitting two-qubit experiment batches
+
+Use the CLI command:
+```bash
+guest submit-tq-batch
+```
+
+By default the CLI submits the experiment definitions stored in `tq_experiments/default_tq_experiment.json`. You can now point the command to any custom experiment definition JSON by passing `--experiment-path` (or `-e`):
+```bash
+guest submit-tq-batch --experiment-path ./tq_experiments/demo_experiment.json
+```
+
+The CLI forwards the provided JSON to the backend and stores the resulting task info file under `experiment_infos/` for later batch result downloads.
+
+## Working with the job queue
+
+`guest list-jobs` queries the scheduler and now filters the response locally to only show entries created by the currently authenticated user (based on the user id embedded in the access token). Use the `--limit` option to control how many of your own submissions are displayed at once.
+
 

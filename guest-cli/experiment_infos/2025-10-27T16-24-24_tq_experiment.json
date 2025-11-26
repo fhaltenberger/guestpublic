@@ -1,0 +1,14 @@
+{
+  "brilliant-zebra": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "00",
+    "sweeps": 1000,
+    "single_shot": false
+  },
+  "transparent-aardwark": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "01",
+    "sweeps": 1000,
+    "single_shot": false
+  }
+}

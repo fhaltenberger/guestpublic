@@ -1,0 +1,98 @@
+{
+  "angelic-cuscus": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "00",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "warm-mongrel": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "01",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "uncovered-ocelot": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "10",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "inquisitive-stingray": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "11",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "omniscient-gaur": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "00",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "silver-collie": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "01",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "literate-lori": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "10",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "therapeutic-nautilus": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "11",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "thundering-seriema": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "00",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "unbiased-bustard": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "01",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "tall-degu": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "10",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "military-bulldog": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "11",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "cornflower-platypus": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "00",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "lilac-armadillo": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "01",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "fat-earwig": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "10",
+    "sweeps": 100000,
+    "single_shot": false
+  },
+  "noisy-kittiwake": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "11",
+    "sweeps": 100000,
+    "single_shot": false
+  }
+}

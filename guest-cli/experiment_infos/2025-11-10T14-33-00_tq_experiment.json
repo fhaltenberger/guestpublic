@@ -1,0 +1,50 @@
+{
+  "fractal-salmon": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "pistachio-cicada": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "qualified-bandicoot": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "dandelion-bug": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "hilarious-starfish": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "loose-termite": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "speedy-skylark": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "qualified-flamingo": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 1000000,
+    "single_shot": false
+  }
+}

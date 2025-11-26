@@ -1,0 +1,14 @@
+{
+  "careful-jackdaw": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "00",
+    "sweeps": 1000,
+    "single_shot": false
+  },
+  "amorphous-tanuki": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "01",
+    "sweeps": 1000,
+    "single_shot": false
+  }
+}

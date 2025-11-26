@@ -1,0 +1,194 @@
+{
+  "portable-pudu": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "masked-otter": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "sly-dragon": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "practical-nightingale": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "almond-labradoodle": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "cobalt-parrot": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "eccentric-pheasant": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "free-tody": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "wondrous-pogona": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "00",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "honored-dugong": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "01",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "prompt-cougar": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "10",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "fluorescent-coua": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "11",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "pristine-chipmunk": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "00",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "tuscan-tamarin": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "01",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "maroon-quail": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "10",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "bald-pogona": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "11",
+    "sweeps": 1000000,
+    "single_shot": false
+  },
+  "misty-terrier": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 5000000,
+    "single_shot": false
+  },
+  "transparent-silkworm": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 5000000,
+    "single_shot": false
+  },
+  "tactful-swine": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 5000000,
+    "single_shot": false
+  },
+  "icy-narwhal": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 5000000,
+    "single_shot": false
+  },
+  "awesome-binturong": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 5000000,
+    "single_shot": false
+  },
+  "handsome-orca": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 5000000,
+    "single_shot": false
+  },
+  "wisteria-limpet": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 5000000,
+    "single_shot": false
+  },
+  "slick-orca": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 5000000,
+    "single_shot": false
+  },
+  "encouraging-cow": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "00",
+    "sweeps": 5000000,
+    "single_shot": false
+  },
+  "crimson-cicada": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "01",
+    "sweeps": 5000000,
+    "single_shot": false
+  },
+  "exuberant-impala": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "10",
+    "sweeps": 5000000,
+    "single_shot": false
+  },
+  "violet-copperhead": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "11",
+    "sweeps": 5000000,
+    "single_shot": false
+  },
+  "fast-snail": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "00",
+    "sweeps": 5000000,
+    "single_shot": false
+  },
+  "lurking-scallop": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "01",
+    "sweeps": 5000000,
+    "single_shot": false
+  },
+  "straight-lemming": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "10",
+    "sweeps": 5000000,
+    "single_shot": false
+  },
+  "dazzling-buzzard": {
+    "circuit": "sxQB1_c0xQB2",
+    "initState": "11",
+    "sweeps": 5000000,
+    "single_shot": false
+  }
+}
