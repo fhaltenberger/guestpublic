@@ -1,6 +1,6 @@
 {
     "server": {
-      "url": "https://141.2.38.44",
+      "url": "https://qc.uni-frankfurt.de",
       "port": 443
     },
     "keycloak": {

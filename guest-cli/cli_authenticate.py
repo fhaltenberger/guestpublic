@@ -61,7 +61,7 @@ def authenticate_device_flow():
                                 data={
                                     "client_id": CLIENT_ID,
                                     "scope": "openid"},
-                                verify="./guest.crt")
+                                verify=True)
     device_resp.raise_for_status()
     device_data = device_resp.json()
 
@@ -82,7 +82,7 @@ def authenticate_device_flow():
                                         "device_code": device_data["device_code"],
                                         "grant_type": "urn:ietf:params:oauth:grant-type:device_code"
                                         },
-                                    verify="./guest.crt")
+                                    verify=True)
 
         if token_resp.status_code == 200:
             token_json = token_resp.json()

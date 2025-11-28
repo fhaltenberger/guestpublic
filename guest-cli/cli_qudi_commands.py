@@ -20,7 +20,7 @@ def run_rabi(access_token):
     response = requests.post(
         f"{config['server']['url']}/api/run_remote_rabi", 
         headers=headers,
-        verify="./guest.crt"
+        verify=True
     )
 
     try:
@@ -41,7 +41,7 @@ def run_calibration(access_token):
     response = requests.post(
         f"{config['server']['url']}/api/run_calibration", 
         headers=headers,
-        verify="./guest.crt"
+        verify=True
     )
 
     try:
@@ -62,7 +62,7 @@ def run_two_qubit_circuit(access_token):
     response = requests.post(
         f"{config['server']['url']}/api/run_two_qubit_circuit", 
         headers=headers,
-        verify="./guest.crt"
+        verify=True
     )
 
     try:
@@ -90,7 +90,7 @@ def submit_two_qubit_batch(access_token, path=None):
         f"{config['server']['url']}/api/submit_two_qubit_batch", 
         headers=headers,
         json=experiment_data,
-        verify="./guest.crt"
+        verify=True
     )
 
     try:

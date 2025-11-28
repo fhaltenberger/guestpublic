@@ -18,7 +18,7 @@ def get_user_info(access_token):
     response = requests.post(
         f"{config['server']['url']}/auth/realms/{config['keycloak']['realm']}/protocol/openid-connect/userinfo", 
         headers=headers,
-        verify = './guest.crt'
+        verify = True
     )
 
     print(response.text)

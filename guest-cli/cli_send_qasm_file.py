@@ -21,7 +21,7 @@ def send_qasm_file(qasm_file_path, access_token):
             f"{config['server']['url']}/api/simulate_qasm", 
             headers=headers, 
             files={"qasm_file": qasm_file},
-            verify="./guest.crt"
+            verify=True
         )
 
     try:
