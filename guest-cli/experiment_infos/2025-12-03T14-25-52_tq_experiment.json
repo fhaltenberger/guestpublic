@@ -1,0 +1,114 @@
+{
+  "gleaming-jackdaw": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "sloppy-mussel": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "graceful-duck": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "independent-eel": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "expert-bettong": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "inescapable-chital": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "black-binturong": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "ginger-tanuki": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "tan-spaniel": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "stylish-owl": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "light-spoonbill": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "inquisitive-caiman": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "lemon-crocodile": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "fragrant-quetzal": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "wandering-wasp": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "watchful-heron": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  }
+}

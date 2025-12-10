@@ -1,20 +1,20 @@
-{
+{ "simulate": true,
   "experiments": [
-    {"initState": "00", "circuit": "sxQB1_c0xQB2", "sweeps": 100000, "single_shot": false},
-    {"initState": "01", "circuit": "sxQB1_c0xQB2", "sweeps": 100000, "single_shot": false},
-    {"initState": "10", "circuit": "sxQB1_c0xQB2", "sweeps": 100000, "single_shot": false},
-    {"initState": "11", "circuit": "sxQB1_c0xQB2", "sweeps": 100000, "single_shot": false},
-    {"initState": "00", "circuit": "sxQB1_c0xQB2", "sweeps": 100000, "single_shot": false},
-    {"initState": "01", "circuit": "sxQB1_c0xQB2", "sweeps": 100000, "single_shot": false},
-    {"initState": "10", "circuit": "sxQB1_c0xQB2", "sweeps": 100000, "single_shot": false},
-    {"initState": "11", "circuit": "sxQB1_c0xQB2", "sweeps": 100000, "single_shot": false},
-    {"initState": "00", "circuit": "sxQB1_c0xQB2", "sweeps": 100000, "single_shot": false},
-    {"initState": "01", "circuit": "sxQB1_c0xQB2", "sweeps": 100000, "single_shot": false},
-    {"initState": "10", "circuit": "sxQB1_c0xQB2", "sweeps": 100000, "single_shot": false},
-    {"initState": "11", "circuit": "sxQB1_c0xQB2", "sweeps": 100000, "single_shot": false},
-    {"initState": "00", "circuit": "sxQB1_c0xQB2", "sweeps": 100000, "single_shot": false},
-    {"initState": "01", "circuit": "sxQB1_c0xQB2", "sweeps": 100000, "single_shot": false},
-    {"initState": "10", "circuit": "sxQB1_c0xQB2", "sweeps": 100000, "single_shot": false},
-    {"initState": "11", "circuit": "sxQB1_c0xQB2", "sweeps": 100000, "single_shot": false}
+    {"initState": "00", "circuit": "", "sweeps": 500000, "single_shot": false},
+    {"initState": "01", "circuit": "", "sweeps": 500000, "single_shot": false},
+    {"initState": "10", "circuit": "", "sweeps": 500000, "single_shot": false},
+    {"initState": "11", "circuit": "", "sweeps": 500000, "single_shot": false},
+    {"initState": "00", "circuit": "", "sweeps": 500000, "single_shot": false},
+    {"initState": "01", "circuit": "", "sweeps": 500000, "single_shot": false},
+    {"initState": "10", "circuit": "", "sweeps": 500000, "single_shot": false},
+    {"initState": "11", "circuit": "", "sweeps": 500000, "single_shot": false},
+    {"initState": "00", "circuit": "", "sweeps": 500000, "single_shot": false},
+    {"initState": "01", "circuit": "", "sweeps": 500000, "single_shot": false},
+    {"initState": "10", "circuit": "", "sweeps": 500000, "single_shot": false},
+    {"initState": "11", "circuit": "", "sweeps": 500000, "single_shot": false},
+    {"initState": "00", "circuit": "", "sweeps": 500000, "single_shot": false},
+    {"initState": "01", "circuit": "", "sweeps": 500000, "single_shot": false},
+    {"initState": "10", "circuit": "", "sweeps": 500000, "single_shot": false},
+    {"initState": "11", "circuit": "", "sweeps": 500000, "single_shot": false}
   ]
 }
