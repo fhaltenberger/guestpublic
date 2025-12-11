@@ -10,6 +10,7 @@ def load_config():
     return config
 
 config = load_config()
+VERIFY_SERVER_CERT = config.get("security", {}).get("verify_server_cert", True)
 
 # Configuration
 KEYCLOAK_BASE_URL = config["server"]["url"]+"/auth"
@@ -61,7 +62,7 @@ def authenticate_device_flow():
                                 data={
                                     "client_id": CLIENT_ID,
                                     "scope": "openid"},
-                                verify=True)
+                                verify=VERIFY_SERVER_CERT)
     device_resp.raise_for_status()
     device_data = device_resp.json()
 
@@ -82,7 +83,7 @@ def authenticate_device_flow():
                                         "device_code": device_data["device_code"],
                                         "grant_type": "urn:ietf:params:oauth:grant-type:device_code"
                                         },
-                                    verify=True)
+                                    verify=VERIFY_SERVER_CERT)
 
         if token_resp.status_code == 200:
             token_json = token_resp.json()

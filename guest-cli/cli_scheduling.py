@@ -13,6 +13,7 @@ def load_config():
     return config
 
 config = load_config()
+VERIFY_SERVER_CERT = config.get("security", {}).get("verify_server_cert", True)
 
 def _extract_user_id_from_token(token: str):
     """Decode the JWT access token locally to obtain the submitting user's id."""
@@ -32,7 +33,7 @@ def get_job_status(token, job_id):
         response = requests.get(
             f"{config['server']['url']}/api/tasks/{job_id}", 
             headers=headers,
-            verify=True
+            verify=VERIFY_SERVER_CERT
         )
         response.raise_for_status()
         
@@ -122,7 +123,7 @@ def list_jobs(token, limit=30):
         response = requests.get(
             f"{config['server']['url']}/api/tasks?limit={limit}", 
             headers=headers,
-            verify=True
+            verify=VERIFY_SERVER_CERT
         )
         response.raise_for_status()
         
@@ -217,7 +218,7 @@ def download_job_result(token, job_id, output_path=None):
         status_response = requests.get(
             f"{config['server']['url']}/api/tasks/{job_id}",
             headers=headers,
-            verify=True
+            verify=VERIFY_SERVER_CERT
         )
         status_response.raise_for_status()
         
@@ -230,7 +231,7 @@ def download_job_result(token, job_id, output_path=None):
         download_response = requests.get(
             f"{config['server']['url']}/api/tasks/{job_id}/download",
             headers=headers,
-            verify=True,
+            verify=VERIFY_SERVER_CERT,
             stream=True  # Stream the response for large files
         )
         download_response.raise_for_status()
@@ -295,7 +296,7 @@ def batch_download_results(token, experiment_info_json, output_dir=None):
                 status_response = requests.get(
                     f"{config['server']['url']}/api/tasks/{task_id}",
                     headers=headers,
-                    verify=True
+                    verify=VERIFY_SERVER_CERT
                 )
                 status_response.raise_for_status()
                 
@@ -309,7 +310,7 @@ def batch_download_results(token, experiment_info_json, output_dir=None):
                 download_response = requests.get(
                     f"{config['server']['url']}/api/tasks/{task_id}/download",
                     headers=headers,
-                    verify=True,
+                    verify=VERIFY_SERVER_CERT,
                     stream=True
                 )
                 download_response.raise_for_status()
@@ -355,7 +356,7 @@ def job_details(token, limit=30):
         response = requests.get(
             f"{config['server']['url']}/api/tasks?limit={limit}", 
             headers=headers,
-            verify=True
+            verify=VERIFY_SERVER_CERT
         )
         response.raise_for_status()
         
@@ -435,7 +436,7 @@ def resubmit_job(token, job_id):
         response = requests.post(
             f"{config['server']['url']}/api/resubmit_job/{job_id}",
             headers=headers,
-            verify=True
+            verify=VERIFY_SERVER_CERT
         )
         response.raise_for_status()
         
@@ -467,7 +468,7 @@ def cancel_job(token, job_id, terminate=False):
             f"{config['server']['url']}/api/cancel_task/{job_id}",
             headers=headers,
             params={"terminate": "true" if terminate else "false"},
-            verify=True
+            verify=VERIFY_SERVER_CERT
         )
         response.raise_for_status()
         result = response.json()
@@ -491,7 +492,7 @@ def cancel_pending_jobs(token):
         response = requests.post(
             f"{config['server']['url']}/api/cancel_pending",
             headers=headers,
-            verify=True
+            verify=VERIFY_SERVER_CERT
         )
         response.raise_for_status()
         result = response.json()
@@ -527,7 +528,7 @@ def check_availability(token):
         response = requests.get(
             f"{config['server']['url']}/api/tasks?limit=1",
             headers=headers,
-            verify=True,
+            verify=VERIFY_SERVER_CERT,
             timeout=10
         )
         response.raise_for_status()
@@ -542,7 +543,7 @@ def check_availability(token):
             module_response = requests.get(
                 f"{config['server']['url']}/api/get_module_states",
                 headers=headers,
-                verify=True,
+                verify=VERIFY_SERVER_CERT,
                 timeout=10
             )
             module_response.raise_for_status()

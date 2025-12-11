@@ -10,6 +10,7 @@ def load_config():
     return config
 
 config = load_config()
+VERIFY_SERVER_CERT = config.get("security", {}).get("verify_server_cert", True)
 
 TOKEN_FILE_PATH = config["paths"]["token_file_path"]
 
@@ -21,7 +22,7 @@ def send_qasm_file(qasm_file_path, access_token):
             f"{config['server']['url']}/api/simulate_qasm", 
             headers=headers, 
             files={"qasm_file": qasm_file},
-            verify=True
+            verify=VERIFY_SERVER_CERT
         )
 
     try:

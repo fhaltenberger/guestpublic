@@ -10,7 +10,8 @@
     },
     "security": {
       "token_lifetime": 3600,
-      "refresh_token_lifetime": 86400
+      "refresh_token_lifetime": 86400,
+      "verify_server_cert": true
     },
     "paths": {
       "token_file_path": "keycloak_token/token.json"
