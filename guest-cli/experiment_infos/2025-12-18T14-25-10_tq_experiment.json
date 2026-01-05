@@ -1,0 +1,114 @@
+{
+  "teal-seahorse": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "heretic-vole": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "efficient-butterfly": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "important-honeybee": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "utopian-bustard": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "impetuous-tarantula": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "bouncy-muskrat": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "lush-shark": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "mauve-uakari": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "juicy-dragonfly": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "wondrous-muskrat": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "boisterous-pudu": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "benign-horse": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "tuscan-deer": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "messy-ringtail": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "turquoise-quail": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  }
+}

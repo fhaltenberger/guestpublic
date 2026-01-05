@@ -107,7 +107,7 @@ def get_job_status(token, job_id):
                 click.echo(f"Server response: {e.response.text}")
 
 def list_jobs(token, limit=30):
-    """List all jobs with their submission times and execution duration for successful jobs"""
+    """List all jobs with their submission times, execution duration and submitting user"""
     headers = {"Authorization": f"Bearer {token}"}
     user_id = _extract_user_id_from_token(token)
     
@@ -130,23 +130,25 @@ def list_jobs(token, limit=30):
         result = response.json()        
         tasks = result.get('tasks', [])
 
-        if user_id:
-            tasks = [task for task in tasks if task.get('user_id') == user_id]
-
         if not tasks:
-            click.echo("No jobs found for the authenticated user.")
+            click.echo("No jobs found.")
             return
             
-        click.echo("\nYour Jobs:")
-        click.echo("-" * 100)
-        click.echo(f"{'ID':<26} {'Type':<4} {'Status':<10} {'Submitted At':<12} {'Execution Time':<15} {'Failure Info'}")
-        click.echo("-" * 100)
+        click.echo("\nJobs:")
+        click.echo("-" * 120)
+        click.echo(f"{'ID':<26} {'Type':<4} {'Status':<10} {'User':<16} {'Submitted At':<12} {'Execution Time':<15} {'Failure Info'}")
+        click.echo("-" * 120)
         
         for task in tasks:
             task_id = task.get('task_id', 'Unknown')
             task_type = task.get('task_type', 'Unknown')
             status = task.get('status', 'Unknown')
             submitted_at = task.get('submitted_at', 'Unknown')
+            user_name = (
+                task.get('user_name')
+                or task.get('username')
+                or task.get('user_id', 'Unknown')
+            )
             
             # Format timestamp to show only MM-DDTHH:MM
             if submitted_at != 'Unknown':
@@ -198,7 +200,7 @@ def list_jobs(token, limit=30):
                 else:
                     failure_info = f"Error (retries: {retries})"
             
-            click.echo(f"{task_id:<26} {job_type_abbrev:<4} {status:<10} {formatted_time:<12} {execution_time:<15} {failure_info}")
+            click.echo(f"{task_id:<26} {job_type_abbrev:<4} {status:<10} {user_name:<16} {formatted_time:<12} {execution_time:<15} {failure_info}")
         
     except requests.exceptions.RequestException as e:
         click.echo(f"Error: {str(e)}")

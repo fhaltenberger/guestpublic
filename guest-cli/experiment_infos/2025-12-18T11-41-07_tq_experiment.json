@@ -1,0 +1,114 @@
+{
+  "apricot-meerkat": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "amazing-mink": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "fascinating-jaguar": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "platinum-muskox": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "knowing-impala": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "evasive-wolverine": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "impartial-mastodon": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "fancy-coucal": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "tasteful-scallop": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "coral-coot": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "slim-monkey": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "versed-ibis": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "piquant-cassowary": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "ethereal-numbat": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "military-kestrel": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "fast-finch": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  }
+}

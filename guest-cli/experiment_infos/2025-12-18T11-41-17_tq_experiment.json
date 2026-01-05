@@ -1,0 +1,114 @@
+{
+  "sandy-fox": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": false
+  },
+  "dashing-griffin": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": false
+  },
+  "positive-lion": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": false
+  },
+  "merry-mammoth": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": false
+  },
+  "valiant-akita": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": false
+  },
+  "sincere-cuttlefish": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": false
+  },
+  "maize-pillbug": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": false
+  },
+  "gifted-akita": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": false
+  },
+  "invisible-bullfinch": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": false
+  },
+  "topaz-dove": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": false
+  },
+  "outgoing-tuna": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": false
+  },
+  "dandelion-coua": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": false
+  },
+  "amiable-coyote": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": false
+  },
+  "emerald-kagu": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": false
+  },
+  "clever-fossa": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": false
+  },
+  "wakeful-rottweiler": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": false
+  }
+}

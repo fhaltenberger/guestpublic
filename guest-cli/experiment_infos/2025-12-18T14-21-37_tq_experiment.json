@@ -1,0 +1,114 @@
+{
+  "sweet-scorpion": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "cooperative-mouflon": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "funny-sponge": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "steady-squirrel": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "brave-otter": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "mindful-hoatzin": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "thick-angelfish": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "black-crayfish": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "gigantic-kestrel": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "interesting-tortoise": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "abstract-koel": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "hungry-eel": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "roaring-jerboa": {
+    "circuit": "",
+    "initState": "00",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "marigold-guillemot": {
+    "circuit": "",
+    "initState": "01",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "authentic-jackdaw": {
+    "circuit": "",
+    "initState": "10",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  },
+  "remarkable-bullfrog": {
+    "circuit": "",
+    "initState": "11",
+    "sweeps": 500000,
+    "single_shot": false,
+    "simulate": true
+  }
+}
